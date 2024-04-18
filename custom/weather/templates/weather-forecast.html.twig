@@ -1,0 +1,27 @@
+{# weather-forecast.html.twig #}
+
+{# Include the CSS file #}
+{{ attach_library('weather/weather_css') }}
+
+{# HTML markup for weather forecast #}
+<div class="weather-forecast">
+    <h2>Weather Forecast for the Next 3 Days</h2>
+    {% for day in forecast %}
+        <div class="day">
+            <div class="date">{{ day.date }}</div>
+            <div class="temperature">Average Temperature: {{ day.average_temperature }}°C</div>
+            {# Display weather condition with emojis #}
+            <div class="condition">
+                {% if day.predominant_condition == 'Sunny' %}
+                    ☀️ Sunny
+                {% elseif day.predominant_condition == 'Rainy' %}
+                    🌧️ Rainy
+                {% elseif day.predominant_condition == 'Cloudy' %}
+                    ☁️ Cloudy
+                {% else %}
+                    {{ day.predominant_condition }}
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

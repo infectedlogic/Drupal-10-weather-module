@@ -1,0 +1,7 @@
+name: 'Weather'
+type: module
+description: 'Displays the weather for Istanbul.'
+core_version_requirement: ^10 || ^11
+stylesheets:
+  all:
+    - css/weather.css: {}

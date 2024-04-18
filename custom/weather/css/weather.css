@@ -1,0 +1,19 @@
+.weather-forecast {
+    font-family: Arial, sans-serif;
+}
+  
+.day {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.date {
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.temperature, .condition {
+    margin-top: 5px;
+}
